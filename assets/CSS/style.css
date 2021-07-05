@@ -292,11 +292,12 @@ hr {
 .card {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    margin: 80px -15px 0;
 }
 
 .card__item {
-    width: 380px;
+    width: 33.33333%;
+    padding: 0 15px;
 }
 
 .card__inner {
