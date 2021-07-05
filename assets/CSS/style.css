@@ -1063,8 +1063,13 @@ hr {
         padding: 40px 0;
     }
 
+    .card {
+        justify-content: center
+    }
+
     .card__item {
         width: 100%;
+        max-width: 410px;
     }
 
     .slider__text {
