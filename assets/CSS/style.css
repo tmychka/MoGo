@@ -292,6 +292,7 @@ hr {
 .card {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 80px -15px 0;
 }
 
@@ -324,6 +325,8 @@ hr {
 
 .card__img img {
     display: block;
+    max-width: 100%;
+    height: auto;
     transition: opacity .1s linear;
 }
 
@@ -1058,6 +1061,10 @@ hr {
 
     .section {
         padding: 40px 0;
+    }
+
+    .card__item {
+        width: 100%;
     }
 
     .slider__text {
