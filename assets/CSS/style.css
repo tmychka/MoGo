@@ -356,6 +356,7 @@ hr {
 
 .stat {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stat__item {
@@ -384,12 +385,14 @@ hr {
 
 .services {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .services__item {
-    flex: 1 1 0;
+    width: 33.33333%;
     padding-right: 35px;
     padding-left: 85px;
+    margin-bottom: 30px;
     position: relative;
 }
 
@@ -421,6 +424,8 @@ hr {
 
 .devices__item {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .devices__item--iphone {
@@ -432,10 +437,19 @@ hr {
 
 .wedo {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .wedo__item {
     width: 50%;
+    padding: 0 15px;
+}
+
+.wedo__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .accordion__item {
@@ -517,6 +531,9 @@ hr {
 }
 
 .reviews__photo {
+   display: block;
+   width: 210px;
+   height: 210px;
    position: absolute;
    border: 2px solid #95e1d3;
    border-radius: 50%;
@@ -607,6 +624,17 @@ hr {
     display: flex;
     justify-content: space-between;   
     align-items: center;
+    margin: 0 -15px;
+}
+
+.logos__item {
+    padding: 0 15px;
+}
+
+.logos__img {
+    display: block;
+    min-width: 100%;
+    height: auto;   
 }
 
 .card__info {
@@ -1039,6 +1067,10 @@ hr {
     .intro__title {
         font-size: 120px;
     }
+
+    .reviews__text {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 990px) {
@@ -1049,6 +1081,40 @@ hr {
 
     .intro__title {
         font-size: 80px;
+    }
+
+    .stat {
+        justify-content: center;
+    }
+
+    .stat__item {
+        flex: none;
+        width: 33.33333%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border: 0;
+    }
+
+    .stat__item:last-child {
+        border-right: 0;
+    }
+
+    .services__item {
+        width: 50%;
+        padding-bottom: 0;
+    }
+
+    .reviews {
+        padding: 0 60px;
+    }
+
+    .reviews__photo {
+        height: 150px;
+        width: 150px;
+    }
+
+    .reviews__item {
+        padding-left: 175px;
     }
     
 }
@@ -1063,13 +1129,23 @@ hr {
         padding: 40px 0;
     }
 
+    .section--devices {
+        padding-bottom: 0;
+    }
+
     .card {
+        margin-top: 50px;
         justify-content: center
     }
 
     .card__item {
         width: 100%;
         max-width: 410px;
+        margin-bottom: 30px;
+    }
+
+    .card__item:last-child {
+        margin-bottom: 0;
     }
 
     .slider__text {
@@ -1080,6 +1156,45 @@ hr {
         width: 50%;
     }
 
+    .services {
+        justify-content: center;
+    }
+
+    .services__item {
+        width: 100%;
+        max-width: 400px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+
+    .services__icon {
+        left: 0;
+    }
+
+    .wedo__img {
+        display: none;
+    }
+
+    .wedo__item {
+        width: 100%;
+    }
+
+    .reviews__photo {
+        position: static;
+        margin: 0 auto 20px;
+    }
+
+    .reviews__item {
+        padding-left: 0;
+    }
+
+    .reviews__text {
+        font-size: 16px;
+    }
+
+    .reviews__author {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1108,8 +1223,41 @@ hr {
         margin: 20px auto; 
     }
 
-}
+    .stat__item {
+        width: 100%;
+        border-bottom: 1px solid rgb(255, 251, 251);
+    }
 
+    .stat__item:last-child {
+        border-bottom: 0;
+    }
+
+    .stat__count {
+        font-size: 52px;
+    }
+
+    .devices {
+        max-width: 320px;
+    }
+
+    .devices__item--iphone {
+        width: 180px;
+        bottom: -50px;
+        right: -80px;
+    }
+
+    .reviews {
+        padding: 0;
+    }
+
+    .reviews__btn {
+        top: 18%;
+    }
+
+    .logos {
+        flex-wrap: wrap;
+    }
+}
 
 .autor__cite {
    display: flex;
