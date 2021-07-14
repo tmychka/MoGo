@@ -25,6 +25,10 @@ hr {
     background-color: rgb(194, 190, 190);
 }
 
+.page {
+    overflow: hidden;
+}
+
 .container {
     width: 100%;
     padding: 0 15px;    
