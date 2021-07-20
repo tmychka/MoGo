@@ -20,4 +20,19 @@ $(function() {
         }
     }
 
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+
+        const $this = $(this)
+        const blockId = $this.data('scroll');
+        const blockOffset = $(blockId).offset().top;
+
+        $("#nav a").removeClass("active")
+        $this.addClass("active")
+
+        $("html, body").animate({
+            scrollTop: blockOffset
+        }, 700)
+    })
+
 });
