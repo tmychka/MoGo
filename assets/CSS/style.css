@@ -596,13 +596,17 @@ hr {
 }
 
 .reviews {
-    padding: 0 110px;
     position: relative; 
 }
 
+.reviews .slick-slider {
+    padding: 0 110px;
+}
+
 .reviews__item {
-   padding-left: 260px;
-   position: relative;
+    min-height: 210px;
+    padding-left: 260px;
+    position: relative;
 }
 
 .reviews__photo {
@@ -641,16 +645,24 @@ hr {
     background-color: tomato;
 }
 
-.reviews__btn {
+.slick-arrow {
+    display: block;
     font-size: 0;
     color: transparent;
+    cursor: pointer;
+    border: 0;
+    background: none;
     position: absolute;
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
 }
 
- .reviews__btn::after {
+.slick-arrow:focus {
+    outline: 0;
+}
+
+.slick-arrow::after {
     content: '';
     display: block;
     width: 10px;
@@ -659,13 +671,12 @@ hr {
     border-left: 2px solid rgb(27, 27, 27);
  }
 
-
-.reviews__btn--prev {
+.slick-prev {
     left: 0;
     transform: rotate(-45deg);
 }
 
-.reviews__btn--next {
+.slick-next {
     right: 0;
     transform: rotate(135deg);
 }
@@ -1188,7 +1199,7 @@ hr {
         padding-bottom: 0;
     }
 
-    .reviews {
+    .reviews .slick-slider {
         padding: 0 60px;
     }
 
@@ -1254,10 +1265,34 @@ hr {
         background-color: #eb8b8d;
     }
 
+    .nav__icon {
+        display: block;
+        padding: 10px 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav.active {
+        display: block;
+    }
+
     .nav__link {
         display: block;
+        text-align: center;
         margin: 0;
-        padding: 8px 20px;
+        padding: 10px 20px;
+    }
+
+    .nav__link::after {
+        content: '';
+        width: 0%;
+    }
+
+    .nav__link:hover::after,
+    .nav__link.active:after {
+        opacity: 1;
+        width: 50%;
     }
 
     .nav-toggle {
@@ -1414,11 +1449,11 @@ hr {
         right: -80px;
     }
 
-    .reviews {
+    .reviews .slick-slider {
         padding: 0;
     }
 
-    .reviews__btn {
+    .slick-arrow {
         top: 18%;
     }
 
@@ -1476,8 +1511,6 @@ hr {
     .subscribe__btn {
         width: 100%;
     }
-
-
 
 }
 
